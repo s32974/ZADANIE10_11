@@ -1,7 +1,8 @@
 public class C_Chlodniczy extends Kontenery{
 
 
-    public C_Chlodniczy(double MasaLadunku, double Wysokosc, double WagaWlasna, double Glembokosc, double MaksymalnaLadownosc, int NunerSeryjny, String literka) {
-        super(MasaLadunku, Wysokosc, WagaWlasna, Glembokosc, MaksymalnaLadownosc, literka);
+    public C_Chlodniczy(double masaLadunku, double wysokosc, double wagaWlasna, double glembokosc, double maksymalnaLadownosc, String literka, String info) {
+        super(masaLadunku, wysokosc, wagaWlasna, glembokosc, maksymalnaLadownosc, literka, info);
     }
 }
+
