@@ -1,23 +1,35 @@
-public class Kontenery {
+import java.util.ArrayList;
 
+public class Kontenery {
+    // co potrzea w kontenerach
     private double MasaLadunku;
     private double Wysokosc;
     private double WagaWlasna;
     private double Glembokosc;
-    private NumerSerujny NunerSeryjny;
     private double MaksymalnaLadownosc;
+    private int numerSeryjny;
+    private String literka;
 
-    public Kontenery(double MasaLadunku,double Wysokosc,double WagaWlasna,double Glembokosc,NumerSerujny NunerSeryjny) {
 
-
+    public Kontenery(double MasaLadunku,double Wysokosc,double WagaWlasna,double Glembokosc,double MaksymalnaLadownosc, String literka) {
         this.MasaLadunku = MasaLadunku;
         this.Wysokosc = Wysokosc;
         this.WagaWlasna = WagaWlasna;
         this.Glembokosc = Glembokosc;
-        this.NunerSeryjny = NunerSeryjny;
-        this.MaksymalnaLadownosc = MasaLadunku;
+        this.MaksymalnaLadownosc = MaksymalnaLadownosc;
+        this.literka = literka;
 
     }
+
+    public void assignNumerSeryjny(int i){
+        this.numerSeryjny = i+1;}
+
+    // pozuskiwanie kodu kontenera
+public String getKodKontrnera() {
+        return ("KON-"+this.literka+"-"+this.numerSeryjny);
+}
+
+
 
     public class OverfillException extends RuntimeException {
         public OverfillException() {
@@ -25,8 +37,10 @@ public class Kontenery {
         }
     }
 
+
+
     public void opruznienieLadunku() {
-        //komunikat
+        System.out.print("Oprużniono kontener "+this.MasaLadunku+"kg");
         this.MasaLadunku=0;
 
     }
