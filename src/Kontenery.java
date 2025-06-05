@@ -24,6 +24,8 @@ public class Kontenery {
     }
 
 
+
+
     public void assignNumerSeryjny(int i){
         this.numerSeryjny = i+1;}
 
