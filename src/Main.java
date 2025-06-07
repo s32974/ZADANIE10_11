@@ -8,11 +8,11 @@ public class Main {
 
         ArrayList numerySeryjne = new ArrayList<Kontenery>();
 
-       Kontenery kontener1 = new Kontenery(52, 50, 25, 40 ,100, "C","Do Ameryki");
+       Kontenery kontener1 = new Kontenery(52, 50, 25, 40 ,100, "C");
        numerySeryjne.add(kontener1);
        kontener1.assignNumerSeryjny(numerySeryjne.indexOf(kontener1));
 
-       Kontenery kontener2 = new Kontenery(123.6, 200, 100, 600 ,200, "L","Do Keni");
+       Kontenery kontener2 = new Kontenery(123.6, 200, 100, 600 ,200, "L");
        numerySeryjne.add(kontener2);
        kontener2.assignNumerSeryjny(numerySeryjne.indexOf(kontener2));
 

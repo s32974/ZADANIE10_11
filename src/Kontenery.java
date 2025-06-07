@@ -9,17 +9,16 @@ public class Kontenery {
     private double maksymalnaLadownosc;
     private int numerSeryjny;
     private String literka;
-    private String info;
 
 
-    public Kontenery(double masaLadunku,double wysokosc,double wagaWlasna,double glembokosc,double maksymalnaLadownosc, String literka, String info) {
+    public Kontenery(double masaLadunku,double wysokosc,double wagaWlasna,double glembokosc,double maksymalnaLadownosc, String literka) {
         this.masaLadunku = masaLadunku;
         this.wysokosc = wysokosc;
         this.wagaWlasna = wagaWlasna;
         this.glembokosc = glembokosc;
         this.maksymalnaLadownosc = maksymalnaLadownosc;
         this.literka = literka;
-        this.info = info;
+
 
     }
 
