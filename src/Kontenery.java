@@ -6,9 +6,9 @@ public class Kontenery {
 
     // co potrzea w kontenerach
 
-    private static double masaLadunku;
+    private double masaLadunku;
     private double wysokosc;
-    private static double wagaWlasna;
+    private double wagaWlasna;
     private double glembokosc;
     protected double maksymalnaLadownosc;
     protected String numerSeryjny;
@@ -24,8 +24,8 @@ public class Kontenery {
         System.out.println(numerSeryjny + " Został utworzony");
     }
 
-    public static double masaCalkowita(){
-        return (masaLadunku + wagaWlasna);
+    public double masaCalkowita(){
+        return (this.masaLadunku + this.wagaWlasna);
     }
 
 
@@ -38,7 +38,7 @@ public class Kontenery {
 
 
     public void opruznienieLadunku() {
-        System.out.print("Oprużniono kontener z " + this.masaLadunku + "kg ładumku");
+        System.out.println("Oprużniono kontener z " + this.masaLadunku + "kg ładumku");
         this.masaLadunku = 0.0;
 
     }
@@ -48,9 +48,10 @@ public class Kontenery {
 
         if (this.masaLadunku + materialLadowany <= this.maksymalnaLadownosc) {
             this.masaLadunku = this.masaLadunku + materialLadowany;
-            System.out.print("Do kontenera dodano "+materialLadowany+"kg");
-            System.out.print("Łącznie "+this.masaLadunku+"kg / "+this.maksymalnaLadownosc);
+            System.out.println("Do kontenera dodano "+materialLadowany+" kg");
+            System.out.println("Łącznie "+this.masaLadunku+"kg na "+this.maksymalnaLadownosc);
         } else {
+            System.out.println(this.masaLadunku + materialLadowany+" > "+this.maksymalnaLadownosc);
             throw new OverfillException();
         }
 
@@ -59,7 +60,7 @@ public class Kontenery {
 
 
     public double getMasaLadunku() {
-        return masaLadunku;
+        return this.masaLadunku;
     }
 
     public void setMasaLadunku(double masaLadunku) {
@@ -68,11 +69,12 @@ public class Kontenery {
 
 
     public void wyswietlInfo(){
-        System.out.println("Masa: " + masaLadunku);
-        System.out.println("Wysokosc: " + wysokosc);
-        System.out.println("Waga: " + wagaWlasna);
-        System.out.println("Glembokosc: " + glembokosc);
-        System.out.println("NumerSeryjny: " + numerSeryjny);
+        System.out.println("INFO-kontener-----------------");
+        System.out.println("Masa: " + this.masaLadunku);
+        System.out.println("Wysokosc: " + this.wysokosc);
+        System.out.println("Waga: " + this.wagaWlasna);
+        System.out.println("Glembokosc: " + this.glembokosc);
+        System.out.println("NumerSeryjny: " + this.numerSeryjny);
     }
 
 

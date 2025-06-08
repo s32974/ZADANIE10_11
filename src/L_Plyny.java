@@ -14,8 +14,8 @@ public class L_Plyny extends Kontenery implements IHazardNotifier {
             //90%
             if (this.getMasaLadunku() + materialLadowany <= this.maksymalnaLadownosc*0.9) {
                 this.setMasaLadunku(this.getMasaLadunku() + materialLadowany);
-                System.out.print("Do kontenera dodano " + materialLadowany + "kg");
-                System.out.print("Łącznie " + this.getMasaLadunku() + "kg / " + this.maksymalnaLadownosc);
+                System.out.println("Do kontenera dodano " + materialLadowany + "kg");
+                System.out.println("Łącznie " + this.getMasaLadunku() + "kg / " + this.maksymalnaLadownosc);
             } else {
                 wykrytoHazard(numerSeryjny);
             }
@@ -23,8 +23,8 @@ public class L_Plyny extends Kontenery implements IHazardNotifier {
             //50%
             if (this.getMasaLadunku() + materialLadowany <= this.maksymalnaLadownosc*0.5) {
                 this.setMasaLadunku(this.getMasaLadunku() + materialLadowany);
-                System.out.print("Do kontenera dodano " + materialLadowany + "kg");
-                System.out.print("Łącznie " + this.getMasaLadunku() + "kg / " + this.maksymalnaLadownosc);
+                System.out.println("Do kontenera dodano " + materialLadowany + "kg");
+                System.out.println("Łącznie " + this.getMasaLadunku() + "kg / " + this.maksymalnaLadownosc);
             } else {
                 wykrytoHazard(numerSeryjny);
             }
@@ -39,7 +39,8 @@ public class L_Plyny extends Kontenery implements IHazardNotifier {
     @Override
     public void wyswietlInfo() {
         super.wyswietlInfo();
-        System.out.println("Niebezpieczny: "+ czyNiebezpieczny);
+        System.out.println("Niebezpieczny: "+ this.czyNiebezpieczny);
+        System.out.println("------------------------------");
     }
 }
 

@@ -3,9 +3,9 @@ import java.util.Map;
 
 public class C_Chlodniczy extends Kontenery {
     private String rodzajProduktu;
-    private Double temperatura;
+    private double temperatura;
 
-    public C_Chlodniczy(double masaLadunku, double wysokosc, double wagaWlasna, double glembokosc, double maksymalnaLadownosc, String typKontenera) {
+    public C_Chlodniczy(double masaLadunku, double wysokosc, double wagaWlasna, double glembokosc, double maksymalnaLadownosc, String rodzajProduktu, double temperatura) {
         super(masaLadunku, wysokosc, wagaWlasna, glembokosc, maksymalnaLadownosc, "C");
         this.rodzajProduktu = rodzajProduktu;
         this.temperatura = temperatura;
@@ -26,9 +26,10 @@ public class C_Chlodniczy extends Kontenery {
     }
 
 
-    static Map<String, Double> temperaturyProduktow;
+    Map<String,Double> temperaturyProduktow = new HashMap<>();;
 
-    static {
+
+    {
         temperaturyProduktow.put("Banany", 13.3);
         temperaturyProduktow.put("Czekolada", 18.0);
         temperaturyProduktow.put("Ryba", 2.0);
@@ -49,8 +50,9 @@ public class C_Chlodniczy extends Kontenery {
     @Override
     public void wyswietlInfo() {
         super.wyswietlInfo();
-        System.out.println("Rodzaj produktu: " + rodzajProduktu);
-        System.out.println("Temperatura produktu: " + temperatura);
+        System.out.println("Rodzaj produktu: " + this.rodzajProduktu);
+        System.out.println("Temperatura produktu: " + this.temperatura);
+        System.out.println("------------------------------");
     }
 }
 

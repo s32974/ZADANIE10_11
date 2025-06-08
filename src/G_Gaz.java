@@ -1,14 +1,14 @@
 public class G_Gaz extends Kontenery implements IHazardNotifier {
     private double cisnienie;
 
-    public G_Gaz(double masaLadunku, double wysokosc, double wagaWlasna, double glembokosc, double maksymalnaLadownosc, boolean czyNiebezpieczny) {
+    public G_Gaz(double masaLadunku, double wysokosc, double wagaWlasna, double glembokosc, double maksymalnaLadownosc, double cisnienie) {
         super(masaLadunku, wysokosc, wagaWlasna, glembokosc, maksymalnaLadownosc, "G");
         this.cisnienie=cisnienie;
     }
 
     @Override
     public void opruznienieLadunku() {
-        System.out.print("Oprużniono kontener z " + this.getMasaLadunku() * 0.95 + "kg ładumku");
+        System.out.println("Oprużniono kontener z " + this.getMasaLadunku() * 0.95 + "kg ładumku");
         this.setMasaLadunku( this.getMasaLadunku() * 0.05);
     }
 
@@ -20,7 +20,8 @@ public class G_Gaz extends Kontenery implements IHazardNotifier {
     @Override
     public void wyswietlInfo() {
         super.wyswietlInfo();
-        System.out.print("Cisnienie: "+cisnienie);
+        System.out.println("Cisnienie: "+this.cisnienie);
+        System.out.println("------------------------------");
     }
 }
 
