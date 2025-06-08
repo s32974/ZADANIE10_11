@@ -1,8 +1,10 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Kontenery {
 
     private static int licznik = 0;
+    public static List<Kontenery> wszystkieKontenery = new ArrayList<>();
 
     // co potrzea w kontenerach
 
@@ -14,7 +16,7 @@ public class Kontenery {
     protected String numerSeryjny;
 
 
-    public Kontenery(double masaLadunku, double wysokosc, double wagaWlasna, double glembokosc, double maksymalnaLadownosc,String typKontenera) {
+    public Kontenery(double masaLadunku, double wysokosc, double wagaWlasna, double glembokosc, double maksymalnaLadownosc, String typKontenera) {
         this.masaLadunku = masaLadunku;
         this.wysokosc = wysokosc;
         this.wagaWlasna = wagaWlasna;
@@ -22,12 +24,16 @@ public class Kontenery {
         this.maksymalnaLadownosc = maksymalnaLadownosc;
         this.numerSeryjny = generujNumerSeryjny(typKontenera);
         System.out.println(numerSeryjny + " Został utworzony");
+        wszystkieKontenery.add(this);
     }
 
-    public double masaCalkowita(){
+    public String getNumerSeryjny() {
+        return numerSeryjny;
+    }
+
+    public double masaCalkowita() {
         return (this.masaLadunku + this.wagaWlasna);
     }
-
 
 
     // generowanie kodu kontenera
@@ -48,10 +54,10 @@ public class Kontenery {
 
         if (this.masaLadunku + materialLadowany <= this.maksymalnaLadownosc) {
             this.masaLadunku = this.masaLadunku + materialLadowany;
-            System.out.println("Do kontenera dodano "+materialLadowany+" kg");
-            System.out.println("Łącznie "+this.masaLadunku+"kg na "+this.maksymalnaLadownosc);
+            System.out.println("Do kontenera dodano " + materialLadowany + " kg");
+            System.out.println("Łącznie " + this.masaLadunku + "kg na " + this.maksymalnaLadownosc);
         } else {
-            System.out.println(this.masaLadunku + materialLadowany+" > "+this.maksymalnaLadownosc);
+            System.out.println(this.masaLadunku + materialLadowany + " > " + this.maksymalnaLadownosc);
             throw new OverfillException();
         }
 
@@ -68,7 +74,7 @@ public class Kontenery {
     }
 
 
-    public void wyswietlInfo(){
+    public void wyswietlInfo() {
         System.out.println("INFO-kontener-----------------");
         System.out.println("Masa: " + this.masaLadunku);
         System.out.println("Wysokosc: " + this.wysokosc);
@@ -78,7 +84,9 @@ public class Kontenery {
     }
 
 
-
-
-
+    public static void wyswietlWszystkieKontenery() {
+        for (Kontenery k : wszystkieKontenery) {
+            System.out.println(k.numerSeryjny);
+        }
+    }
 }
