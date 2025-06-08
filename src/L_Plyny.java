@@ -10,19 +10,19 @@ public class L_Plyny extends Kontenery implements IHazardNotifier {
     public void zaladunekKontenera(double materialLadowany) {
         if (czyNiebezpieczny = false) {
             //90%
-            if (this.masaLadunku + materialLadowany <= this.maksymalnaLadownosc*0.9) {
-                this.masaLadunku = this.masaLadunku + materialLadowany;
+            if (this.getMasaLadunku() + materialLadowany <= this.maksymalnaLadownosc*0.9) {
+                this.setMasaLadunku(this.getMasaLadunku() + materialLadowany);
                 System.out.print("Do kontenera dodano " + materialLadowany + "kg");
-                System.out.print("Łącznie " + this.masaLadunku + "kg / " + this.maksymalnaLadownosc);
+                System.out.print("Łącznie " + this.getMasaLadunku() + "kg / " + this.maksymalnaLadownosc);
             } else {
                 wykrytoHazard(numerSeryjny);
             }
         } else {
             //50%
-            if (this.masaLadunku + materialLadowany <= this.maksymalnaLadownosc*0.5) {
-                this.masaLadunku = this.masaLadunku + materialLadowany;
+            if (this.getMasaLadunku() + materialLadowany <= this.maksymalnaLadownosc*0.5) {
+                this.setMasaLadunku(this.getMasaLadunku() + materialLadowany);
                 System.out.print("Do kontenera dodano " + materialLadowany + "kg");
-                System.out.print("Łącznie " + this.masaLadunku + "kg / " + this.maksymalnaLadownosc);
+                System.out.print("Łącznie " + this.getMasaLadunku() + "kg / " + this.maksymalnaLadownosc);
             } else {
                 wykrytoHazard(numerSeryjny);
             }

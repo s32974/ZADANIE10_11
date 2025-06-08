@@ -6,7 +6,7 @@ public class Kontenery {
 
     // co potrzea w kontenerach
 
-    double masaLadunku;
+    private double masaLadunku;
     private double wysokosc;
     private double wagaWlasna;
     private double glembokosc;
@@ -25,7 +25,7 @@ public class Kontenery {
     }
 
     public static double masaCalkowita(){
-        return masaLadunku+wagaWlasna;
+        return (this.masaLadunku + this.wagaWlasna);
     }
 
 
@@ -60,5 +60,9 @@ public class Kontenery {
 
     public double getMasaLadunku() {
         return masaLadunku;
+    }
+
+    public void setMasaLadunku(double masaLadunku) {
+        this.masaLadunku = masaLadunku;
     }
 }

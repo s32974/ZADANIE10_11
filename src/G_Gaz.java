@@ -8,8 +8,8 @@ public class G_Gaz extends Kontenery implements IHazardNotifier {
 
     @Override
     public void opruznienieLadunku() {
-        System.out.print("Oprużniono kontener z " + this.masaLadunku * 0.95 + "kg ładumku");
-        this.masaLadunku = this.masaLadunku * 0.05;
+        System.out.print("Oprużniono kontener z " + this.getMasaLadunku() * 0.95 + "kg ładumku");
+        this.setMasaLadunku( this.getMasaLadunku() * 0.05);
     }
 
     @Override
