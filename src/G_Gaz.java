@@ -16,5 +16,11 @@ public class G_Gaz extends Kontenery implements IHazardNotifier {
     public void wykrytoHazard(String numerSeryjny) {
         System.out.println("Błąd: Styuacja niebezpieczna w kontenerze: " + numerSeryjny);
     }
+
+    @Override
+    public void wyswietlInfo() {
+        super.wyswietlInfo();
+        System.out.print("Cisnienie: "+cisnienie);
+    }
 }
 

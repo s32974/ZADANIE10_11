@@ -51,6 +51,11 @@ public class C_Chlodniczy extends Kontenery {
         temperaturyProduktow.put(rodzaj, temperatura);
     }
 
-
+    @Override
+    public void wyswietlInfo() {
+        super.wyswietlInfo();
+        System.out.println("Rodzaj produktu: " + rodzajProduktu);
+        System.out.println("Temperatura produktu: " + temperatura);
+    }
 }
 

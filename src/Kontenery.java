@@ -6,9 +6,9 @@ public class Kontenery {
 
     // co potrzea w kontenerach
 
-    private double masaLadunku;
+    private static double masaLadunku;
     private double wysokosc;
-    private double wagaWlasna;
+    private static double wagaWlasna;
     private double glembokosc;
     protected double maksymalnaLadownosc;
     protected String numerSeryjny;
@@ -25,7 +25,7 @@ public class Kontenery {
     }
 
     public static double masaCalkowita(){
-        return (this.masaLadunku + this.wagaWlasna);
+        return (masaLadunku + wagaWlasna);
     }
 
 
@@ -65,4 +65,18 @@ public class Kontenery {
     public void setMasaLadunku(double masaLadunku) {
         this.masaLadunku = masaLadunku;
     }
+
+
+    public void wyswietlInfo(){
+        System.out.println("Masa: " + masaLadunku);
+        System.out.println("Wysokosc: " + wysokosc);
+        System.out.println("Waga: " + wagaWlasna);
+        System.out.println("Glembokosc: " + glembokosc);
+        System.out.println("NumerSeryjny: " + numerSeryjny);
+    }
+
+
+
+
+
 }

@@ -37,6 +37,7 @@ public class Statek {
         }
     }
 
+
     public void usunKontener(Kontenery kontener) {
         przeworzoneKontenery.remove(kontener);
     }

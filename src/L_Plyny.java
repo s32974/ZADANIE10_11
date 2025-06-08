@@ -1,3 +1,5 @@
+import java.lang.foreign.SymbolLookup;
+
 public class L_Plyny extends Kontenery implements IHazardNotifier {
     private boolean czyNiebezpieczny;
 
@@ -32,6 +34,12 @@ public class L_Plyny extends Kontenery implements IHazardNotifier {
     @Override
     public void wykrytoHazard(String numerSeryjny) {
         System.out.println("Błąd: Pruba przepełnienia kontenera: "+numerSeryjny+" powyrzej bezpiecznego limitu.");
+    }
+
+    @Override
+    public void wyswietlInfo() {
+        super.wyswietlInfo();
+        System.out.println("Niebezpieczny: "+ czyNiebezpieczny);
     }
 }
 
