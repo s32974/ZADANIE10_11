@@ -21,7 +21,7 @@ public class Kontenery {
         this.glembokosc = glembokosc;
         this.maksymalnaLadownosc = maksymalnaLadownosc;
         this.numerSeryjny = generujNumerSeryjny(typKontenera);
-        System.out.println(numerSeryjny + "Został utworzony");
+        System.out.println(numerSeryjny + " Został utworzony");
     }
 
     public static double masaCalkowita(){

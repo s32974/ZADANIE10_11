@@ -40,6 +40,7 @@ public class Statek {
 
     public void usunKontener(Kontenery kontener) {
         przeworzoneKontenery.remove(kontener);
+        System.out.println("Usunięto kontener: "+kontener.numerSeryjny);
     }
 
     public void zastompKontener(Kontenery kontenerStary, Kontenery kontenerNowy) {
@@ -47,21 +48,19 @@ public class Statek {
         zaladujKontener(kontenerNowy);
     }
 
-    public void zamianaKontenerow (Kontenery kontener1, Kontenery kontener2) {
-
-
-        //????????????????????
-
+    public void zamianaKontenerow(Kontenery kontenerStary, Kontenery kontenerNowy) {
+        zastompKontener(kontenerStary, kontenerNowy);
+        zastompKontener(kontenerNowy, kontenerStary);
 
     }
 
     public void wyswietlInfo() {
         System.out.println("Max prędkość statku " + prendkosc + " węzłów");
         System.out.println("Max kontenerów " + maxKontenerow);
-        System.out.println("Mzx Waga przewozu " + maxWagaPrzewozu + " ton");
+        System.out.println("Max Waga przewozu " + maxWagaPrzewozu + " ton");
         System.out.println("Kontenerowiec przewozi:");
         for (Kontenery k : przeworzoneKontenery) {
-            System.out.println(k);
+            System.out.println(k.numerSeryjny);
         }
     }
 }

@@ -11,11 +11,6 @@ public class C_Chlodniczy extends Kontenery {
         this.temperatura = temperatura;
     }
 
-    @Override
-    public void zaladunekKontenera(double materialLadowany) {
-        //błąd
-        System.out.println("Błąd: Aby załadować coś do kontenera Chłodniczego musisz podać rodzaj ładowanego produktu.");
-    }
 
     public void zaladunekKontenera(double materialLadowany, String rodzajLadowanego) {
 
