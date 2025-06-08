@@ -47,7 +47,7 @@ public class Statek {
         zaladujKontener(kontenerNowy);
     }
 
-    public void zamianaKontenerow(Statek statek1, Statek statek2, Kontenery kontener1, Kontenery kontener2) {
+    public void zamianaKontenerow (Kontenery kontener1, Kontenery kontener2) {
 
 
         //????????????????????
