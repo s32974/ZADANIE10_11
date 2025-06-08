@@ -6,12 +6,12 @@ public class Kontenery {
 
     // co potrzea w kontenerach
 
-    private double masaLadunku;
+    double masaLadunku;
     private double wysokosc;
     private double wagaWlasna;
     private double glembokosc;
-    private double maksymalnaLadownosc;
-    private String numerSeryjny;
+    protected double maksymalnaLadownosc;
+    protected String numerSeryjny;
 
 
     public Kontenery(double masaLadunku, double wysokosc, double wagaWlasna, double glembokosc, double maksymalnaLadownosc,String typKontenera) {

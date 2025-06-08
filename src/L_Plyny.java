@@ -1,8 +1,39 @@
-public class L_Plyny extends Kontenery {
+public class L_Plyny extends Kontenery implements IHazardNotifier {
+    private boolean czyNiebezpieczny;
 
+    public L_Plyny(double masaLadunku, double wysokosc, double wagaWlasna, double glembokosc, double maksymalnaLadownosc, boolean czyNiebezpieczny) {
+        super(masaLadunku, wysokosc, wagaWlasna, glembokosc, maksymalnaLadownosc, "L");
+        this.czyNiebezpieczny = czyNiebezpieczny;
+    }
 
-    public L_Plyny(double masaLadunku, double wysokosc, double wagaWlasna, double glembokosc, double maksymalnaLadownosc, String typKontenera) {
-        super(masaLadunku, wysokosc, wagaWlasna, glembokosc, maksymalnaLadownosc, typKontenera);
+    @Override
+    public void zaladunekKontenera(double materialLadowany) {
+        if (czyNiebezpieczny = false) {
+            //90%
+            if (this.masaLadunku + materialLadowany <= this.maksymalnaLadownosc*0.9) {
+                this.masaLadunku = this.masaLadunku + materialLadowany;
+                System.out.print("Do kontenera dodano " + materialLadowany + "kg");
+                System.out.print("Łącznie " + this.masaLadunku + "kg / " + this.maksymalnaLadownosc);
+            } else {
+                wykrytoHazard(numerSeryjny);
+            }
+        } else {
+            //50%
+            if (this.masaLadunku + materialLadowany <= this.maksymalnaLadownosc*0.5) {
+                this.masaLadunku = this.masaLadunku + materialLadowany;
+                System.out.print("Do kontenera dodano " + materialLadowany + "kg");
+                System.out.print("Łącznie " + this.masaLadunku + "kg / " + this.maksymalnaLadownosc);
+            } else {
+                wykrytoHazard(numerSeryjny);
+            }
+        }
+    }
+
+    @Override
+    public void wykrytoHazard(String numerSeryjny) {
+        System.out.println("Błąd: Pruba przepełnienia kontenera: "+numerSeryjny+" powyrzej bezpiecznego limitu.");
     }
 }
+
+
 
