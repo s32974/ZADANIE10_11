@@ -24,6 +24,12 @@ public class Kontenery {
         System.out.println(numerSeryjny + "Został utworzony");
     }
 
+    public static double masaCalkowita(){
+        return masaLadunku+wagaWlasna;
+    }
+
+
+
     // generowanie kodu kontenera
     public String generujNumerSeryjny(String typKontenera) {
         licznik++;
@@ -52,4 +58,7 @@ public class Kontenery {
     }
 
 
+    public double getMasaLadunku() {
+        return masaLadunku;
+    }
 }
