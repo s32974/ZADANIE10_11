@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-/*
+
         C_Chlodniczy kontener1 = new C_Chlodniczy(52, 50, 25, 40, 100, "Czekolada", 2);
 
         L_Plyny kontener2 = new L_Plyny(24, 200, 50, 600, 200, true);
 
-        G_Gaz kontener3 = new G_Gaz(130, 220, 110, 60, 250, 400);
+        G_Gaz kontener3 = new G_Gaz(13, 220, 11, 60, 250, 400);
 
 
         Statek statek1 = new Statek(160, 50, 280);
@@ -34,14 +34,17 @@ public class Main {
         kontener1.opruznienieLadunku();
 
         statek1.zastompKontener(kontener1, kontener3);
+
+
+
+
         //---------------------------------------
-*/
 
 
-        menu();
+        // menu();
 
     }
-
+/*
     public static void menu() {
 
         System.out.println("Lista statków:");
@@ -57,7 +60,7 @@ public class Main {
 
     private static void menuObcji() {
         System.out.println("Możliwe akcje:");
-        System.out.println("1. Dodaj kontenerowiec");
+        System.out.println("1. Dodaj statek");
         System.out.println("2. Dodaj kontener");
 
         if (Kontenery.wszystkieKontenery.size() > 0) {
@@ -72,22 +75,45 @@ public class Main {
     private static void skaner() {
         Scanner dana = new Scanner(System.in);
         if (dana.equals(1)) {
-          
-
+            tworzenieStatku();
         } else if (dana.equals(2)) {
-
-            
+            tworzenieKontenera();
         } else if (dana.equals(3)) {
-
-        }else if (dana.equals(4)) {
-            
+            usuwanieKontenera();
+        } else if (dana.equals(4)) {
+            usuwanieStatku();
         } else if (dana.equals(5)) {
-            
+
         } else if (dana.equals(6)) {
-            
+
         }
 
 
     }
 
+
+
+    private static void tworzenieStatku() {
+
+
+    }
+
+    private static void tworzenieKontenera() {
+
+
+    }
+
+    private static void usuwanieKontenera() {
+        System.out.println("Podaj statek do usunięcia:");
+        Scanner kod = new Scanner(System.in);
+
+    }
+
+    private static void usuwanieStatku() {
+        System.out.println("Podaj statek do usunięcia:");
+    Scanner kod = new Scanner(System.in);
+
+    }
+
+ */
 }
